@@ -5,12 +5,12 @@ import { formatNumber } from "../services/helper";
 const Product = ({item, handleDelete, handleDecrement, handleIncrement}) => {
   return (
     <section
-      className="flex justify-between items-center gap-6 py-3 border-t"
+      className="flex flex-col sm:flex-row justify-between items-center gap-6 py-3 border-t"
     >
       <img
         src={item.image}
         alt="product"
-        className="rounded-lg aspect-[9/11] h-32 object-cover"
+        className="rounded-lg aspect-video sm:aspect-[9/11] h-32 object-cover"
       />
       <ul className="capitalize grow shrink flex flex-col justify-between items-start self-stretch">
         <li>
@@ -27,7 +27,7 @@ const Product = ({item, handleDelete, handleDecrement, handleIncrement}) => {
           <p className="w-14">size</p>
           <p>: {item.size}</p>
         </li>
-        <li className="inline-flex items-center gap-6 mt-1">
+        <li className="flex flex-col items-start gap-1 mt-2 lg:inline-flex lg:flex-row lg:items-center lg:gap-6 lg:mt-1">
           <button
             className="inline-flex gap-1 items-baseline uppercase opacity-75 hover:opacity-100"
             onClick={() => handleDelete(item.id)}
@@ -43,7 +43,7 @@ const Product = ({item, handleDelete, handleDecrement, handleIncrement}) => {
           </button>
         </li>
       </ul>
-      <div className="flex flex-col justify-between items-end self-stretch">
+      <div className="flex flex-row-reverse items-center sm:flex-col justify-between sm:items-end self-stretch shrink-0">
         <div className="rounded border border-gray-400 overflow-hidden">
           <button
             className="hover:bg-slate-200 bg-slate-100 disabled:cursor-not-allowed disabled:hover:bg-slate-50 aspect-square w-8"

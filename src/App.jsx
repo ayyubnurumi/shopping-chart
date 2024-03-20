@@ -41,8 +41,8 @@ function App() {
           Shopping Chart
         </h1>
       </header>
-      <main className="text-gray-700 bg-slate-50 min-h-[calc(100vh-6rem)] w-full px-11 py-10 flex justify-between items-start gap-6">
-        <article className="shrink grow basis-3/4 bg-white rounded-xl roun shadow-md p-6 flex flex-col">
+      <main className="text-gray-700 bg-slate-50 min-h-[calc(100vh-6rem)] w-full px-11 py-10 flex flex-col-reverse md:flex-row justify-between items-stretch md:items-start gap-6">
+        <article className="shrink grow md:basis-3/4 bg-white rounded-xl shadow-md p-6 flex flex-col">
           <h2 className="capitalize text-xl font-medium mb-5">{`chart (${
             items.length
           } ${items.length < 2 ? "item" : "items"})`}</h2>
@@ -59,7 +59,7 @@ function App() {
               );
             })}
         </article>
-        <aside className="shrink grow basis-1/4">
+        <aside className="shrink grow md:basis-1/4">
           <Total subtotal={subtotal} total={totalPriceWithVat} />
           <Discount />
         </aside>

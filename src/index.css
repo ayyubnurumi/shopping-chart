@@ -25,7 +25,7 @@
 }
 
 #root {
-  width: 100vw;
+  width: full;
   display: flex;
   flex-direction: column;
 }
